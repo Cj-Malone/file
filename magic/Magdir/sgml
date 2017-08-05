@@ -25,6 +25,27 @@
 >15	string		>\0
 >>19	search/4096	\<osm			OpenStreetMap XML data
 
+# Atom
+# https://tools.ietf.org/html/rfc4287
+# From: Cj Malone <CjMalone@mail.com>
+0	string			\<?xml\ version="
+>19	search/1024		\"http://www.w3.org/2005/Atom\"
+>>19	search/1024		feed				Atom Feed Document
+!:mime	application/atom+xml
+
+0	string			\<?xml\ version="
+>19	search/1024		\"http://www.w3.org/2005/Atom\"
+>>19	search/1024		entry				Atom Entry Document
+!:mime	application/atom+xml
+
+# RSS (Really Simple Syndication)
+# http://www.rssboard.org/rss-specification
+# From: Cj Malone <CjMalone@mail.com>
+0	string			\<?xml\ version="
+>19	search/1024		\<rss			Really Simple Syndication
+!:strength +10
+!:mime	application/rss+xml
+
 # xhtml
 0	string/t		\<?xml\ version="
 >19	search/4096/cWbt	\<!doctype\ html	XHTML document text
